@@ -1,0 +1,9 @@
+- what Am I trying to achieve?
+    - Trying to implement drawing the snake with the body implemented 
+- How should we go about this?
+    - I think that I should start with a snake body of about 3
+- How do we achieve this?
+    - remove all the clutter in the code
+    - Create a list with the snake bodys 
+    - Find a Way to successfully print them on the screen by looping through the list
+    - After this you can work on the snake movement

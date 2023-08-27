@@ -1,0 +1,15 @@
+# #down
+# player_down, player_down_rect = rot_center(player, 0, player_rect.centerx, player_rect.centery)
+# #right 
+# player_right, player_right_rect = rot_center(player, 90, player_rect.centerx, player_rect.centery)
+# #up
+# player_up, player_up_rect = rot_center(player, 180, player_rect.centerx, player_rect.centery)
+# #left
+# player_left, player_left_rect = rot_center(player, 270, player_rect.centerx, player_rect.centery)
+
+
+
+# def rot_center(image, angle, x, y):
+#     rotated_image = pygame.transform.rotate(image, angle)
+#     new_rect = rotated_image.get_rect(center = image.get_rect(center = (x, y)).center)
+#     return rotated_image, new_rect
