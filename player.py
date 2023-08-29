@@ -11,8 +11,10 @@ class Player:
         self.body_rect = body_img.get_rect()
         self.whole_player = [Vector2(1,1), Vector2(2,1), Vector2(3,1)]
     
+    
+    #drawing snake
     def draw(self):
-        
+        #drawing the hea
         self.head_rect.topleft = (self.whole_player[0].x * 32, self.whole_player[0].y * 32)
         self.display.blit(self.head_img, self.head_rect) 
         
@@ -22,11 +24,12 @@ class Player:
     #moving down 
     def move_down(self): 
         self.whole_player_copy = copy.deepcopy(self.whole_player)
-        self.whole_player_copy[0].y += 1
+        self.whole_player_copy[0].y += 1       
         for i in range(1,3): 
             self.whole_player_copy[i] = self.whole_player[i-1] 
         self.whole_player = self.whole_player_copy
-            
+        
+        
     #moving up
     def move_up(self): 
         self.whole_player_copy = copy.deepcopy(self.whole_player)
@@ -50,6 +53,9 @@ class Player:
         for i in range(1,3): 
             self.whole_player_copy[i] = self.whole_player[i-1] 
         self.whole_player = self.whole_player_copy
+        
+    def addBody(self): 
+        pass
         
     def collision(self, score_rect): 
         if self.head_rect.colliderect(score_rect):

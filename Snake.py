@@ -28,17 +28,18 @@ while running:
             running = False 
         
         if event.type == pygame.KEYDOWN:
-            print(snake.collision(apple.get_apple_rect()))     
-            print(apple.get_apple_rect())
-            print(snake.get_head_rect())
             if event.key == pygame.K_DOWN:
                 snake.move_down()
+                print("down")
             if event.key == pygame.K_RIGHT:
                 snake.move_right()
+                print("right")
             if event.key == pygame.K_LEFT:
                 snake.move_left()
+                print("left")
             if event.key == pygame.K_UP:
                 snake.move_up() 
+                print("up")
                
     keys = pygame.key.get_pressed()
     display.blit(bg, (0,0))
