@@ -15,7 +15,6 @@ snake = Player(head, body, display)
 #loading the background 
 bg = pygame.image.load("Graphics/bg.png")
 
-
 #apple
 apple_image = pygame.image.load("Graphics/apple.png")
 apple = Apple(apple_image, display)
@@ -31,15 +30,21 @@ while running:
             if event.key == pygame.K_DOWN:
                 snake.move_down()
                 print("down")
+                print(snake.getBody())  
             if event.key == pygame.K_RIGHT:
                 snake.move_right()
                 print("right")
+                print(snake.getBody())
             if event.key == pygame.K_LEFT:
                 snake.move_left()
                 print("left")
+                print(snake.getBody())
             if event.key == pygame.K_UP:
                 snake.move_up() 
                 print("up")
+                print(snake.getBody())
+            if event.key == pygame.K_a:
+                snake.addNewTail()
                
     keys = pygame.key.get_pressed()
     display.blit(bg, (0,0))
